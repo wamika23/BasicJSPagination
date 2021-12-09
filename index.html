@@ -2,12 +2,43 @@
 <html lang="en">
   <style>
     .main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
 
     img {
       border: 2px solid black;
       height: 150px;
       width: 150px;
+    }
+
+    button.disabled {
+      opacity: 0.65;
+      cursor: not-allowed;
+    }
+
+    button {
+      background-color: #3093c7;
+      color: white;
+      text-decoration: none;
+      border: 1px solid #25729a;
+      padding: 10px 10px 10px 10px;
+      border-radius: 3px;
+      width: 100px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .container {
+      border: 1px solid black;
+      width: 40%;
+      margin: auto;
+      padding: 10px;
+    }
+
+    .buttons {
+      display: flex;
     }
   </style>
   <head>
@@ -18,6 +49,12 @@
   </head>
   <body>
     <script src="./script.js"></script>
-    <div class="main"></div>
+    <div class="container">
+      <div class="main"></div>
+      <div class="buttons">
+        <button id="prev" onclick="goToPrev()">Prev</button>
+        <button id="next" onclick="goToNext()">Next</button>
+      </div>
+    </div>
   </body>
 </html>
